@@ -1049,7 +1049,6 @@ static Node *read_postfix_expr() {
 
 static Node *read_unary_incdec(int op) {
     Node *operand = read_unary_expr();
-    operand = conv(operand);
     ensure_lvalue(operand);
     return ast_uop(op, operand->ty, operand);
 }

@@ -57,6 +57,14 @@ static void test_inc_dec() {
     expect(14, a);
     expect(15, ++a);
     expect(15, a);
+
+    short s = 3;
+    expect(3, s++);
+    expect(4, s);
+    expect(4, ++s);
+    expect(5, s);
+    expect(5, s--);
+    expect(4, s);
 }
 
 static void test_bool() {
