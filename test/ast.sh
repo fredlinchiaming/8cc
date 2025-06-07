@@ -39,7 +39,7 @@ function testcpp {
 
 
 function testfail {
-    echo "$expr" | ./8cc -o /dev/null - 2> /dev/null
+    echo "$expr" | ./8cc -o /dev/null - 2> /dev/null // not sure
     expr="int f(){$1}"
     echo "$expr" | ./8cc -o /dev/null $OPTION - 2> /dev/null
     [ $? -eq 0 ] && fail "Should fail to compile, but succeded: $expr"

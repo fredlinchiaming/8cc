@@ -21,7 +21,7 @@ int oldstyle1(int x, int y) {
     return x + y;
 }
 
-void print(char *s) {
+void print(const char *s) {
     printf("Testing %s ... ", s);
     fflush(stdout);
 }

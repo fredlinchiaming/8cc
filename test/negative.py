@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python3
 # Copyright 2015 Rui Ueyama. Released under the MIT license.
 
 # This file contains negative tests.
@@ -395,9 +395,9 @@ int f() { x: x:; }
 
 def run(args):
     expect, code = args
-    p = Popen(["./8cc", "-c", "-o", "/dev/null", "-"], stdin=PIPE, stdout=PIPE, stderr=STDOUT)
-    out, err = p.communicate(code)
-    if out == None:
+    p = Popen(["./8cc", "-c", "-o", "/dev/null", "-"], stdin=PIPE, stdout=PIPE, stderr=STDOUT, text=True)
+    out, _ = p.communicate(code)
+    if out is None:
         return "expected error, but it didn't fail: %s" % expect
     if out.find(expect) == -1:
         return "expected: %s\ngot: %s" % (expect, out.rstrip("\n"))
@@ -411,7 +411,7 @@ if __name__ == '__main__':
     tests = lex_tests + cpp_tests + encoding_tests + parser_tests
     p = Pool(None)
     for res in p.imap_unordered(run, parseTests(tests)):
-        if res != None:
-            print res
+        if res is not None:
+            print(res)
             exit(1)
     exit(0)

@@ -5,7 +5,7 @@
 // 8cc uses UTF-16 for string literals prefixed with u (char16_t strings).
 // UTF-32 is used for string literals prefixed with L or U
 // (wchar_t or char32_t strings).
-// Unprefixed or u8 strings are supposed to be in UTF-8 endcoding.
+// Unprefixed or u8 strings are supposed to be in UTF-8 encoding.
 // Source files are supposed to be written in UTF-8.
 
 #include "8cc.h"

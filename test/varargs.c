@@ -47,7 +47,7 @@ char *fmt(char *fmt, ...) {
     static char buf[100];
     va_list ap;
     va_start(ap, fmt);
-    vsprintf(buf, fmt, ap);
+    vsnprintf(buf, sizeof(buf), fmt, ap);
     va_end(ap);
     return buf;
 }

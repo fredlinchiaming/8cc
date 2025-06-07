@@ -784,7 +784,7 @@ static char **split(char *buf) {
         p++;
     }
     p = buf;
-    char **r = malloc(sizeof(char *) * len + 1);
+    char **r = malloc(sizeof(char *) * (len + 1));
     int i = 0;
     while (*p) {
         if (p[0] == '\r' && p[1] == '\n') {

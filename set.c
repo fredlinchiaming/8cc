@@ -3,7 +3,7 @@
 // Sets are containers that store unique strings.
 //
 // The data structure is functional. Because no destructive
-// operation is defined, it's guranteed that a set will never
+// operation is defined, it's guaranteed that a set will never
 // change once it's created.
 //
 // A null pointer represents an empty set.

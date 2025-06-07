@@ -8,7 +8,7 @@ size_t strlen(const char *);
 extern int externvar1;
 extern int externvar2;
 
-extern void print(char *s);
+extern void print(const char *s);
 extern void ffail(char *file, int line, char *msg);
 extern void fexpect(char *file, int line, int a, int b);
 extern void fexpect_string(char *file, int line, char *a, char *b);
